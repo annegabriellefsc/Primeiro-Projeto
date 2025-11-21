@@ -1,0 +1,47 @@
+:root {
+    --bg-color: #09090b;
+    /* Fundo bem escuro */
+    --card-bg: #18181b;
+    /* Fundo dos cards/sidebar */
+    --primary: #f43f5e;
+    /* Rosa avermelhado (cor do logo/botão) */
+    --text-main: #fafafa;
+    --text-muted: #a1a1aa;
+    --border-color: #27272a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    /* Importe a fonte Inter do Google Fonts */
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Utilitários de Texto */
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo dos Acordes na letra */
+.chord {
+    color: var(--primary);
+    font-weight: bold;
+    background: rgba(244, 63, 94, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-size: 0.9em;
+}
