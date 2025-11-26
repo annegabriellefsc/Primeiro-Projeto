@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Interface simples para os dados
 interface Song {
     id: number;
     title: string;
@@ -75,11 +74,10 @@ interface Song {
     styles: [`
     .layout-container {
       display: grid;
-      grid-template-columns: 320px 1fr; /* Sidebar fixa, resto fluido */
-      min-height: calc(100vh - 70px); /* Desconta navbar */
+      grid-template-columns: 320px 1fr;
+      min-height: calc(100vh - 70px);
     }
 
-    /* Sidebar Styles */
     .sidebar {
       background-color: var(--bg-color);
       border-right: 1px solid var(--border-color);
@@ -118,7 +116,6 @@ interface Song {
       margin-right: 5px;
     }
 
-    /* Content Styles */
     .content { padding: 3rem; max-width: 900px; }
     .song-header {
       display: flex; justify-content: space-between; align-items: flex-start;
@@ -145,14 +142,12 @@ interface Song {
       font-size: 0.9rem;
     }
 
-    /* Lyrics Styles */
     .lyrics-container { font-size: 1.1rem; line-height: 1.8; }
     .line { margin-bottom: 1.5rem; }
     .spacer { display: inline-block; width: 150px; } /* Espaço manual entre acordes */
   `]
 })
 export class SongView {
-    // Dados Mockados
     songs: Song[] = [
         { id: 1, title: 'Garota de Ipanema', artist: 'Tom Jobim', key: 'F', genre: 'Bossa Nova' },
         { id: 2, title: 'Evidências', artist: 'Chitãozinho & Xororó', key: 'G', genre: 'Sertanejo' },
@@ -164,6 +159,5 @@ export class SongView {
 
     selectSong(song: Song) {
         this.currentSong = song;
-        // Aqui você carregaria a letra/cifra específica da música
     }
 }
