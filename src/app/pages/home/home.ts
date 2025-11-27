@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
     <div class="hero-section">
       <div class="badge">✨ Músicas Brasileiras</div>
       <h1>Aprenda a tocar suas <br><span class="highlight">músicas favoritas</span></h1>
-      <p>Acesse milhares de cifras de músicas brasileiras. De MPB a Sertanejo.</p>
+      <p>Acesse as cifras das suas músicas preferidas.</p>
       
       <button class="btn-primary" routerLink="/musica/1">Começar a tocar 🎸</button>
     </div>

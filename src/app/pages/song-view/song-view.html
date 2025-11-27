@@ -1,0 +1,44 @@
+<div class="layout-container">
+    
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Músicas</h3>
+            <span>{{ songs.length }} músicas</span>
+        </div>
+        
+        <div class="song-list">
+            <div 
+                class="song-item" 
+                *ngFor="let song of songs" 
+                [class.active]="song.id === currentSong.id"
+                (click)="selectSong(song)"
+            >
+                <div class="song-info">
+                    <strong>{{ song.title }}</strong>
+                    <small>{{ song.artist }}</small>
+                </div>
+                <div class="song-meta">
+                    <span class="badge-key">Tom: {{ song.key }}</span>
+                    <span class="badge-genre">{{ song.genre }}</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <header class="song-header">
+            <div>
+                <h1>{{ currentSong.title }}</h1>
+                <p>{{ currentSong.genre }} • {{ currentSong.artist }}</p>
+            </div>
+            <div class="tone-box">Tom: <strong>{{ currentSong.key }}</strong></div>
+        </header>
+
+        <div class="alert-box">
+            ℹ️ Os acordes estão destacados em <span style="color:var(--primary)">rosa</span>.
+        </div>
+
+        <div class="lyrics-container" [innerHTML]="formatLyrics(currentSong.lyrics)"></div>
+        
+    </main>
+</div>
